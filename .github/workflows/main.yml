@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      main
+      - main
 
 jobs:
   build:
@@ -9,9 +9,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
-      - name: Set up JDK
+      - name: Set up the JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
